@@ -1,11 +1,11 @@
-import { Icon } from "lucide-react";
+import { XIcon as Icon } from "lucide-react"; // Use XIcon instead of Icon
 
 import { cn } from "@/lib/utils";
 
 interface HeadingProps {
   title: string;
   description: string;
-  icon: Icon;
+  icon: typeof Icon;
   iconColor?: string;
   bgColor?: string;
 }

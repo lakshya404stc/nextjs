@@ -1,16 +1,15 @@
-'use client';
-
-import { createContext, useContext, Dispatch, SetStateAction, useState } from "react";
+"use client"
+import React, { createContext, useContext, Dispatch, SetStateAction, useState } from "react";
 
 type DataType = {
-    firstName: string
-}
+    firstName: string;
+};
 
 interface ContextProps {
-    userId: string,
-    setUserId: Dispatch<SetStateAction<string>>,
-    data: DataType[],
-    setData: Dispatch<SetStateAction<DataType[]>>
+    userId: string;
+    setUserId: Dispatch<SetStateAction<string>>;
+    data: DataType[];
+    setData: Dispatch<SetStateAction<DataType[]>>;
 }
 
 const GlobalContext = createContext<ContextProps>({
@@ -18,17 +17,17 @@ const GlobalContext = createContext<ContextProps>({
     setUserId: (): string => '',
     data: [],
     setData: (): DataType[] => [] 
-})
+});
 
-export const GlobalContextProvider = ({ children }) => {
+export const GlobalContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [userId, setUserId] = useState('');
-    const [data, setData] = useState({});
-    
+    const [data, setData] = useState<DataType[]>([]);
+
     return (
         <GlobalContext.Provider value={{ userId, setUserId, data, setData }}>
             {children}
         </GlobalContext.Provider>
-    )
+    );
 };
 
 export const useGlobalContext = () => useContext(GlobalContext);

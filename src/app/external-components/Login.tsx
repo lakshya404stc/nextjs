@@ -40,8 +40,7 @@ const formSchema = z.object({
         if(response.data.success === "true"){
           console.log("User Logged")
           const decoded_data = await jwtDecode(response.data.token)
-          await setUserId(decoded_data?.id);
-          await setData(decoded_data);
+
           console.log(data);
           console.log(data);
           redirect("/dashboard");

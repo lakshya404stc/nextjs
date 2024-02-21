@@ -112,7 +112,7 @@ const Page = () => {
     <>
       <div  className="">
       <h1  className="mx-auto mt-5 max-w-xl text-center sm:text-4xl text-3xl md:text-4xl lg:text-5xl">
-        Create Content with <span className="text-blue-600">AI</span> in seconds
+        Create Content with <span className="text-orange-500">AI</span> in seconds
       </h1>
       <p  className="mx-auto mt-5 min-w-prose text-zinc-800 text-center sm:text-lg">
         AI will help you take care of your Ideas for new Content
@@ -183,7 +183,7 @@ const Page = () => {
                               {negative ? (
                                 <Minus className='h-6 w-6 text-gray-300' />
                               ) : (
-                                <Check className='h-6 w-6 text-blue-500' />
+                                <Check className='h-6 w-6 text-orange-500' />
                               )}
                             </div>
                             {footnote ? (

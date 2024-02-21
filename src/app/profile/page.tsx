@@ -81,7 +81,7 @@ export default function Home() {
         ))}
       </section>
       <section className="grid grid-cols-1  gap-4 transition-all lg:grid-cols-2">
-      <div className="w-[90%] border border-blue-500 rounded-lg mx-auto mr-auto sm:min-w-[60%] shadow-lg h-full min-h-[500px] text-lg sm:text-xl resize-none">
+      <div className="w-[90%] border border-orange-500 rounded-lg mx-auto mr-auto sm:min-w-[60%] shadow-lg h-full min-h-[500px] text-lg sm:text-xl resize-none">
 
       <Dialog>
               <DialogTrigger>
